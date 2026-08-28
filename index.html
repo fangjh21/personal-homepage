@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="lisansi 的个人主页 —— 探索智能与形式的边界。" />
+  <title>lisansi · 个人主页</title>
+  <style>
+    /* ============ 设计令牌 ============ */
+    :root {
+      --bg: #fcfcfb;            /* 米白背景 */
+      --bg-soft: #f4f4f2;      /* 柔和区块背景 */
+      --ink: #16181d;          /* 主文字 */
+      --ink-soft: #6b7077;     /* 次级文字 */
+      --line: #e6e6e2;         /* 分隔线 */
+      --accent: #1f6feb;       /* 克制点缀色（链接/强调） */
+      --radius: 14px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", sans-serif;
+      --font-serif: "Georgia", "Songti SC", "SimSun", "Times New Roman", serif;
+      --maxw: 1080px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============ 顶栏 ============ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand span { color: var(--ink-soft); font-weight: 400; }
+    .site-nav { display: flex; gap: 26px; }
+    .site-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .site-nav a:hover { color: var(--ink); }
+
+    /* ============ Hero（照片背景） ============ */
+    .hero {
+      position: relative;
+      color: #fff;
+      padding: clamp(104px, 22vh, 230px) 0 clamp(88px, 17vh, 190px);
+      background:
+        linear-gradient(180deg, rgba(10, 14, 20, 0.58), rgba(10, 14, 20, 0.26) 45%, rgba(10, 14, 20, 0.66)),
+        url("hero.jpg") center 35% / cover no-repeat;
+    }
+    .hero .wrap { position: relative; z-index: 1; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .hero-eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: currentColor;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: clamp(1.9rem, 5.2vw, 3.9rem);
+      line-height: 1.18;
+      letter-spacing: -0.015em;
+      max-width: 20ch;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+    }
+    .hero-title em {
+      font-style: italic;
+      color: #ffd9a8;
+    }
+    .hero-sub {
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      max-width: 56ch;
+    }
+    .hero-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .btn-primary { background: #fff; color: #101319; }
+    .btn-primary:hover { background: #ececec; transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.55); color: #fff; }
+    .btn-ghost:hover { border-color: #fff; transform: translateY(-1px); }
+
+    /* ============ 区块通用 ============ */
+    .section { padding: clamp(56px, 8vh, 92px) 0; border-top: 1px solid var(--line); }
+    .section-head { margin-bottom: 32px; }
+    .section-title {
+      font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .section-desc { color: var(--ink-soft); margin-top: 8px; font-size: 1rem; }
+
+    /* ============ 技能 ============ */
+    .skills { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; }
+    .skills li {
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+    .skills li:hover { border-color: var(--ink); transform: translateY(-1px); }
+
+    /* ============ 联系 ============ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .contact-card {
+      display: block;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--ink);
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+    .contact-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .contact-card .k { font-size: 0.85rem; color: var(--ink-soft); }
+    .contact-card .v { margin-top: 4px; font-weight: 600; word-break: break-all; }
+
+    /* ============ 页脚 ============ */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+    .site-footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ============ 移动端 ============ */
+    @media (max-width: 600px) {
+      .wrap { padding: 0 18px; }
+      .site-nav { gap: 16px; font-size: 0.9rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { justify-content: center; }
+    }
+
+    /* ============ 淡入动画 ============ */
+    .fade {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .fade { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">lisansi<span>·</span></a>
+      <nav class="site-nav" aria-label="站点导航">
+        <a href="#top">首页</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-eyebrow">lisansi · 个人主页</p>
+        <h1 class="hero-title">
+          We live in a simulated world,<br />
+          but AI drives us toward <em>formalism</em>.
+        </h1>
+        <p class="hero-sub">
+          一个关于智能、形式与两者之间一切的观察站。
+          <!-- ✏️ 可替换：改成你的一句话简介 -->
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">联系我</a>
+          <a class="btn btn-ghost" href="#skills">查看技能</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 / 技术栈 -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head fade">
+          <h2 class="section-title">技能 / 技术栈</h2>
+          <p class="section-desc">目前主要围绕这些方向工作与学习。</p>
+        </div>
+        <ul class="skills fade">
+          <!-- ✏️ 可替换：改成你真实的技能标签 -->
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Python</li>
+          <li>PyTorch</li>
+          <li>LLM / Agent</li>
+          <li>Web Development</li>
+          <li>TypeScript</li>
+          <li>Data Analysis</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head fade">
+          <h2 class="section-title">联系我</h2>
+          <p class="section-desc">欢迎交流、合作或只是打个招呼。</p>
+        </div>
+        <div class="contact-grid fade">
+          <a class="contact-card" href="mailto:fangjh2024@163.com">
+            <span class="k">邮箱</span>
+            <div class="v">fangjh2024@163.com</div>
+          </a>
+          <a class="contact-card" href="https://www.xiaohongshu.com/user/profile/3810046058" target="_blank" rel="noopener">
+            <span class="k">小红书 RedNote</span>
+            <div class="v">ID: 3810046058</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> lisansi</span>
+      <span>We live in a simulated world, but AI drives us toward formalism.</span>
+    </div>
+  </footer>
+
+  <script>
+    // 年份自动更新
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 淡入滚动动画
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.fade').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
