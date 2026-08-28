@@ -174,6 +174,11 @@
       line-height: 1.6;
       max-width: 62ch;
     }
+    .piece { margin: 0 0 32px; }
+    .piece-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+    .piece-title { font-weight: 600; font-size: 1.08rem; color: var(--ink); }
+    .piece-meta { color: var(--ink-soft); font-size: 0.85rem; display: inline-flex; gap: 5px; }
+    .piece-text { color: #2f3237; white-space: pre-wrap; line-height: 1.9; font-size: 0.97rem; }
 
     /* ============ 页脚联系 ============ */
     .footer {
@@ -248,47 +253,255 @@
         <p>我相信观察比结论更重要、过程比结果更耐读。下面的文字，大多是在和机器相处的间隙里写下的。</p>
       </section>
 
-        <!-- 随筆：小红书连载小说与个人随笔 -->
-      <section class="section" id="essays">
-        <div class="section-head fade">
-          <h2 class="section-title">随筆</h2>
-          <p class="section-desc">小红书上连载的小说与个人随笔，按时间整理。</p>
-        </div>
-        <h3 class="subtitle">连载小说<span class="sub-note">（按章节顺序）</span></h3>
-        <ul class="essay-list fade">
-        <li class="essay-item"><span class="date">2026-07-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5866a400000000010313ec?xsec_token=ABixQAT_4e7apqNOmekrgx_qkFu1yh88nQMRo2D49mUzo=&xsec_source=pc_feed" target="_blank" rel="noopener">大纲</a><span class="likes">赞 5</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-07-15</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a576f2600000000150260bf?xsec_token=ABDat_XM3XYSy9Ei_qokZ7ptsU2YXQfoxH9cmoXEE--BM=&xsec_source=pc_feed" target="_blank" rel="noopener">序章：缘起太清前途茫</a><span class="likes">赞 10</span></div><div class="ec-desc">不是置身华内的批判 ，只是锚点下这两年的故事</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-15</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5795d30000000016024a0e?xsec_token=ABDat_XM3XYSy9Ei_qokZ7pg2nxPcDqJH67R0hKuwTtU4=&xsec_source=pc_feed" target="_blank" rel="noopener">第一章：老妖传道语心长</a><span class="likes">赞 14</span></div><div class="ec-desc">道可道，非常道。名可名，非常名。</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a58b9a1000000000401ca78?xsec_token=ABixQAT_4e7apqNOmekrgx_uuaU1OvbHG8223WnqjQHWk=&xsec_source=pc_feed" target="_blank" rel="noopener">第二章：半日月兮潜龙用</a><span class="likes">赞 9</span></div><div class="ec-desc">这次绩效，吾一人扛之！</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-17</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a59f94b00000000010335cb?xsec_token=ABmka7fS4gYTWYZv88Ig3uZ5p1Rohqbd_xuwDI6zvxmow=&xsec_source=pc_feed" target="_blank" rel="noopener">第三章：丹炉同修造化功</a><span class="likes">赞 8</span></div><div class="ec-desc">未来谁说的准呢，永远前行</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-14</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a560da2000000001702a950?xsec_token=ABfDJ1G5yrvfeZP4XXURhp94gsBq-7JAv6PuC5kmO0d2M=&xsec_source=pc_feed" target="_blank" rel="noopener">《我在风花雪月里等你》</a><span class="likes">赞 3</span></div><div class="ec-desc">男主米高，女主杨思思。 小说讲述了在上海打拼的年轻人米高，在经历情感挫折与好友离世后，心灰意冷地离开上海，带着好友的遗愿前往大理开始新生活的故事。作品通过上海与大理的双城对比，聚焦都市青年的失落与逃离，其核心立意体现在“…</div></div></li>
-        </ul>
-        <h3 class="subtitle">个人随笔<span class="sub-note">（时间倒序）</span></h3>
-        <ul class="essay-list fade">
-        <li class="essay-item"><span class="date">2026-08-24</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a8bcb3100000000170022d6?xsec_token=ABAnu-fmGt0qcIERKDfraaNwudIcBcrY9tnjJqhHwh8Y8=&xsec_source=pc_feed" target="_blank" rel="noopener">数字ic与ai</a><span class="likes">赞 29</span></div><div class="ec-desc">opus5 在数字领域：c建模，rtl编写，形式验证，用例测试，覆盖率收集，玩了一遍，感觉没有本质瓶颈。人做不到的ai可能可以做到，人一定做不到的，ai也做不到。 周末抽空也用了下DeepSeek harness，感觉也…</div></div></li>
-        <li class="essay-item"><span class="date">2026-08-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a818f39000000002403dced?xsec_token=ABAIWLzfg4gH93s0V-VZwVdbHT9BS_WRUdPa9RFj_6XZY=&xsec_source=pc_feed" target="_blank" rel="noopener">道路尽头</a><span class="likes">赞 4</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-07-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a658ebb000000000301c44f?xsec_token=ABxkloGTjnRZQW5FUv6HJJsk8xc2kqnyw-zW2Z6mrtlNc=&xsec_source=pc_feed" target="_blank" rel="noopener">永远的华小子</a><span class="likes">赞 6</span></div><div class="ec-desc">谁说华子不好，我将重拳出击！</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a54c7070000000016025bae?xsec_token=AB7fhTh1E3oYkNAGiKtG-25m5Uj1qnoEozdITRmXYBn0k=&xsec_source=pc_feed" target="_blank" rel="noopener">彩虹批发</a><span class="likes">赞 1</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-07-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a54bf010000000017009107?xsec_token=AB7fhTh1E3oYkNAGiKtG-25hBr1PqbgMRdC6fg7Z7Y4mk=&xsec_source=pc_feed" target="_blank" rel="noopener">白云苍狗</a><span class="likes">赞 5</span></div><div class="ec-desc">阴晴不定</div></div></li>
-        <li class="essay-item"><span class="date">2026-07-12</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a538c2d000000001702eb5e?xsec_token=ABC_0Gfx2frW_QSN1oy96dtoLuqQCjb6bPlmTCJLeShQ0=&xsec_source=pc_feed" target="_blank" rel="noopener">白天不懂夜的黑</a><span class="likes">赞 8</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-07-11</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5223d9000000001503edc7?xsec_token=ABI44orUyMKEN4URDQHeyoGKtoDCGmI7V6lGylWm22egA=&xsec_source=pc_feed" target="_blank" rel="noopener">来大理提高下文学素养</a><span class="likes">赞 11</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-07-10</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a509e3c0000000016026563?xsec_token=ABUVieaFGkzyZwJ9c7ZOxv_LLbpsnOkHMU7DFXfXvufW8=&xsec_source=pc_feed" target="_blank" rel="noopener">华为离职</a><span class="likes">赞 17</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-06-21</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a3760ed000000001603dc9c?xsec_token=ABRzqI5j73XkyY4D3Z2S-G4tH-txd72xjEtvnj0fhyZFg=&xsec_source=pc_feed" target="_blank" rel="noopener">神性</a><span class="likes">赞 1</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-06-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a2d5e35000000001603c3c9?xsec_token=ABRpzkgRng8LRB8EeE3pmOJfaHMmBPKFlZOOxriBlLhVs=&xsec_source=pc_feed" target="_blank" rel="noopener">物是人非，ai已经占领的原来的东升大厦</a><span class="likes">赞 10</span></div><div class="ec-desc">之前在东升大厦实习，现在王云鹤的办公点就在之前实习公司的楼下</div></div></li>
-        <li class="essay-item"><span class="date">2026-05-25</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a144b150000000037034806?xsec_token=ABARw2AeDIToTdPdfLnkJeNzyvFDjdoSESt2QmmZQxEWU=&xsec_source=pc_feed" target="_blank" rel="noopener">system τ</a><span class="likes">赞 3</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-05-20</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a0db991000000003601886e?xsec_token=AB2rkW_tkU3_H_ruGNPD42zo8NW423mRwy-YxoZB0iiAM=&xsec_source=pc_feed" target="_blank" rel="noopener">你的热爱 vs 你的事业</a><span class="likes">赞 1</span></div></div></li>
-        <li class="essay-item"><span class="date">2026-05-09</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/69fe1a6000000000370357a9?xsec_token=ABK4bbroPan5sjSfc_16I_alDTegQ5-xIcwmh2KMd0KR0=&xsec_source=pc_feed" target="_blank" rel="noopener">不要温和地走入那个凉夜</a><span class="likes">赞 6</span></div><div class="ec-desc">同事离职我能做些什么 今天和马上四年毕业的业务同事交流了下，有些感慨。自己入职来就接手的这位同事的部分工作，自己也马上两年了，两年近乎走到了别人四年的进程。恰逢今天和某ai公司二面hr聊天，要我回北京加入他们业务组才能发…</div></div></li>
-        <li class="essay-item"><span class="date">2026-05-06</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/69fb3b5a000000003601e8f0?xsec_token=AB6hOCuyur25ghkZXXdUDRaQ-8pgEocRzBLC7BrgwGfe8=&xsec_source=pc_feed" target="_blank" rel="noopener">警惕嘉豪恶俗梗</a><span class="likes">赞 12</span></div><div class="ec-desc">“嘉豪”梗源于2024年一位名叫谢政阳的学生模仿DJ表演时，视频被误标为“嘉豪”，从而成为“中二耍帅”的代名词。如今在职场中，它常被滥用为打压他人积极性的标签。 针对同事的嘲笑，你可以这样理解并回应： 1. 名字无罪，寓…</div></div></li>
-        <li class="essay-item"><span class="date">2026-01-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6976bf6d000000002102b635?xsec_token=ABS_6sCppIsSI5-Or9GoSHvIqz3EwcuQrrok_o1Z3Kn24=&xsec_source=pc_feed" target="_blank" rel="noopener">白酒有无出头之日？</a><span class="likes">赞 2</span></div><div class="ec-desc">又一年的历史低点，涨个百分之十不过分吧</div></div></li>
-        <li class="essay-item"><span class="date">2025-12-29</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/695285830000000022039535?xsec_token=ABm8b1a0N_wg7s_iZsbkCVU_ZugXyFkFuGNvlc_5nCct8=&xsec_source=pc_feed" target="_blank" rel="noopener">Formal形式验证的出路是啥？</a><span class="likes">赞 51</span></div></div></li>
-        <li class="essay-item"><span class="date">2025-12-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/694e0e62000000002103135c?xsec_token=ABCUQeMLeTfUDdlQUzv3flrXfh-z2yfxDDkpYPrRTBpPY=&xsec_source=pc_feed" target="_blank" rel="noopener">卖昇腾卡的小女孩</a><span class="likes">赞 911</span></div></div></li>
-        <li class="essay-item"><span class="date">2025-07-08</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/686d1ec400000000150233b4?xsec_token=ABG3PESXOtyHiYwMOowkbG82JtGf-I8Fl_-lGAg2bRfz4=&xsec_source=pc_feed" target="_blank" rel="noopener">正义骑士大战邪恶鸣式</a><span class="likes">赞 3</span></div><div class="ec-desc">卡提希娅</div></div></li>
-        <li class="essay-item"><span class="date">2025-04-27</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/680e0f6f000000000b014747?xsec_token=ABcoZA17umPTUxvdLJDKp8KA8Nmq7Jjh4lGKJRxySBg3E=&xsec_source=pc_feed" target="_blank" rel="noopener">这下成为电子系的边角料了</a><span class="likes">赞 176</span></div><div class="ec-desc">这位置芯片划片给划没了，哈哈哈</div></div></li>
-        <li class="essay-item"><span class="date">2024-10-04</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/66ff9716000000002c02d4eb?xsec_token=AB-jChdHjI4oGdIUdT0M6UKEY8CrvSIkZ2Fp4fTOmsdew=&xsec_source=pc_feed" target="_blank" rel="noopener">智商极高人群的十个特征（视频）</a><span class="likes">赞 3</span></div></div></li>
-        <li class="essay-item"><span class="date">2024-07-28</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/66a63c9d0000000009015b44?xsec_token=ABoBBRM1Q1be_iZoHedxbCWrd14XrPN-y1WN4cndKsLZg=&xsec_source=pc_feed" target="_blank" rel="noopener">华为三丫坡neo</a><span class="likes">赞 9</span></div><div class="ec-desc">0.再游松山湖 1.领工卡，红版welink 2.上课，做团体活动 3.签合同，晨练 好困啊</div></div></li>
-        <li class="essay-item"><span class="date">2024-04-01</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/660abc9d000000001b012e9c?xsec_token=AB8eo5TfZCoYKJ2Umu5KNMWg3uIvvKTYWni1eIi6JZNP4=&xsec_source=pc_feed" target="_blank" rel="noopener">毕业 毕业论文</a><span class="likes">赞 10</span></div></div></li>
-        </ul>
-      </section>
+        <!-- 随笔：小红书连载小说与个人随笔（全文） -->
+        <!-- 随笔：小红书连载小说与个人随笔（全文） -->
+    <section class="section" id="essays">
+      <div class="section-head fade">
+        <h2 class="section-title">随笔</h2>
+        <p class="section-desc">小红书上连载的小说与个人随笔，按时间整理，全文收录。</p>
+      </div>
+      <h3 class="subtitle">连载小说<span class="sub-note">（按章节顺序）</span></h3>
+      <article class="piece" id="ch-6a5866a4"><header class="piece-head"><a class="piece-title">大纲</a><span class="piece-meta"><span class="date">2026-07-16</span>·<span class="likes">赞 5</span></span></header><div class="piece-text">大纲
+序章缘起太清前途茫
+第一章老妖传道语心长
+第二章半日月兮潜龙用
+第三章丹炉同修造化功
+第四章神器蒙尘历沧桑
+第五章词元归宗算力狂
+第六章仙路寻兮事纷
+尾声新
+新旧替兮道始终
+序章
+前途迷茫
+第一章师傅传道
+第二章画饼之术
+第三章智能发展
+第四章盘古之殇
+第五章cpu第二春
+第六章寻找新工作与老员工离职
+尾声
+本人离职与带新人</div></article>
+      <article class="piece" id="ch-6a576f26"><header class="piece-head"><a class="piece-title">序章：缘起太清前途茫</a><span class="piece-meta"><span class="date">2026-07-15</span>·<span class="likes">赞 10</span></span></header><div class="piece-text">李三思者，昔为道宗门徒，亦会笃信其法。
+然两年内，竞背离宗门，此举令外人颇感惊
+。今撰此文，锚点过去未来，亦欲固后来
+者之道心。
+忆往昔，三思亦会身处太清炼器院·彼时院
+系鼎盛，毕业者百十余人，不乏人中龙凤，
+吾深知入道宗者，皆有一腔热血·会有一张
+留影，定格五人笑貌，然时至今日，五人中
+已去其三。聚散离合，是趣也，亦是命也！
+炼器院内，术法万千，亦分三教九流·然天
+下大势，皆被炼丹之术所裹挟，炼器一脉，
+往往只能辅佐炼丹以布道耳。吾虽会习炼器
+炼丹之皮毛，奈何资历尚浅，未得一龙以证
+大道，反为世间名利所惑。故以应届之身，
+寻一方宗门以求庇护。
+然甲辰年（2024年）时局倾覆，库门崩
+塌，遣散流窜者众，皆因挤兑之祸也·库门
+昔日广纳贤才，今朝却言倒闭，其中缘故，
+众说纷·道宗炼器司对此亦有高论，然真
+假难辨，不足为外人道也。
+夫道宗者，昔日以通讯灵器见长。然掌门高
+瞻远瞩，布局深远，外人仅可管中窥豹·正
+所谓“天道损有余而补不足”，天下灵气皆入
+器中！器者，国之重器，大事也！故时人心
+向往之’趋之若鹜，趣曰：“爱信等”。
+吾会有四位旧派炼器师兄，皆入炼器司泰山
+门·泰山者，五岳之首，所炼之器，讲究复
+用万物，包罗万象·彼时泰山门广招天下贤
+才，故吾等皆得入此门，共谋大道。
+太清院入泰山者，同辈十余人也。</div></article>
+      <article class="piece" id="ch-6a5795d3"><header class="piece-head"><a class="piece-title">第一章：老妖传道语心长</a><span class="piece-meta"><span class="date">2026-07-15</span>·<span class="likes">赞 14</span></span></header><div class="piece-text">泰山门，京沪深安均有驻所，领导皆在京
+也。
+新人弟子则以沪为主·故出差往返勤也。
+然半年内，几欲青浦，后固金桥。何人青浦
+何人金桥，始亦有轻重也。
+初入宗门，师传业，道始分。等级亦分也，
+十八以下皆为蝼蚁，十五以下自嘲垃圾堆
+矣。师傅带吾与另一人也，二者同日月，亦
+称缘分。九月十日，写拜贴以赠师也。师
+者，部门奇人，专一形式之术·始教一言，
+守拙则久已，反者早夭。其常以无可替代游
+戏人间也，吾服甚。
+然吾不识青天高，黄地厚，常为形式之术所
+感也，感屠龙之术局限大矣·然囿于形式浮
+点一年有余，未有感同身受者，苦也。序章
+有言，吾识炼器炼丹之皮毛，会以“词元为
+众所需也”形式验证之未来获门主之关注
+注·余感形式之道，需借炼丹之术，亦有探
+索也。
+昔者，获门主之饭局真言，始知布局，浮点
+所授太清院出身二人，一阴一阳，望永流传
+也。
+然阴阳二者，皆觉无趣·所谓道术，多为前
+人一步一印之创造，如何广而推之，亦需利
+诱也。
+吾观师之徒，出走泰山者众也，盖难以感其
+妙也。</div></article>
+      <article class="piece" id="ch-6a58b9a1"><header class="piece-head"><a class="piece-title">第二章：半日月兮潜龙用</a><span class="piece-meta"><span class="date">2026-07-16</span>·<span class="likes">赞 9</span></span></header><div class="piece-text">半日月兮潜龙用
+半似日兮半是月，曾为金龙咬一缺。
+一刘基《烧饼歌》
+道宗之内，绩效最大，此乃北京组长亲
+口言之。泰山门内可有部组之细分。部划分
+责任领域，组划分业务范围。业务之领导，
+绩效之领导，地域之领导者多矣。然有用
+者，绩效耳。
+吾组六七人，邻组六七人，多为二一年
+后生耳。因其业务相似性，遂划为北京邻组
+组长一人管辖。吾组上海者，因未能任组长
+者，遂系统划分为上海地域主管代管矣。
+由此绩效之评定，皆由北京组长一手遮
+天。吾日观月查，未觉其熟吾等之业务进度
+矣，而代管之地域主管甚之。吾组之绩效，
+差中取差。原因有三，其一，业务之边角料
+也，其二，领导之不器也，其三，人之菜
+者，亦由设计组所厌也。
+余自器也，暗想敢打压吾之绩效，自提
+桶耳。虽未得绝顶之绩效，亦可成良，盖以
+形式之术覆浮点，定点耳。然组内他人，或
+皆不得良。
+吾组之事，十三十四即可善之，十五及
+以上若无机遇，亦不可得绝定之绩效。由此
+观之，早溜之大吉不失为上上之策。
+吾曾有言付之于北京往来差人，谓吾组
+之架设，必不久矣。事后观之，一语成。
+差人曾探查吾等之职业愿景，问吾是否愿担
+组长之责？吾笑言，志不在此，心言亦不愿
+为尔等流程之牛马！
+吾部管理多不为术者，亦或离术者久
+矣，不识天地之变换，与之无语也。或可
+日，吾部皆不术也，流程牛马而已，熟干均
+可称良，亦不分人，只由分配任务之大小取
+之。北京组长只顾流程之固化，只云尔等工
+程之简也。待绩效时，只言不及他组之辛
+劳。庸才耳！往深言之，盖人多活少，皆陷
+流程之繁，无亮眼之能耳。组长亦无能为
+力。
+泰山门之大领导者，盖分四人，吾只识
+其中二者。其一旧门主也，与之（后遁离道
+宗入他派）两次交流耳。其二，吾部之领
+导。对吾颇多照顾，亦曾多次画饼也。言及
+形式之术，此未来也，吾虽认同。但吾感形
+式之未来，并非吾等之未来。然一年新生
+耳，亦无实际之佐证，故不言也。
+吾高潜之姿亦由吾部领导所荐。高潜虽
+无大用，亦可收买人心也。
+吾虽不各级领导之权威，因诸事而感
+不可久侍之。又感吾组之能差矣，不可久
+为，徐之而怠也。</div></article>
+      <article class="piece" id="ch-6a59f94b"><header class="piece-head"><a class="piece-title">第三章：丹炉同修造化功</a><span class="piece-meta"><span class="date">2026-07-17</span>·<span class="likes">赞 8</span></span></header><div class="piece-text">第三章：丹炉
+同修造化功
+文娱者，当负文化之功；炼器者，应怀丹炉之
+底蕴。炼丹之术大行其道，需炼器者以炉火适之。
+丹者，或大或小一一小丹以泰山之术亦可成器，大
+丹则泰山之术沦为辅尔。然宗门之内，泰山之众甚
+蕃，而炼丹背景者稀也。朽朽老登，非好学之辈，
+故此为少年人之机遇也。然少年人以部组之隔阁：
+亦不可窥天地之广阔，惜哉。
+器者，为外域所绝也；丹者，复为外域所隔
+也。缘由盖“涌现“之意义深远也。预炼丹之术，今
+须以万炉构成群炉阵法，加之炼丹师秘制手法，炼
+制九九之数，方可初聚丹形。此间过程，学院派多
+难窥其妙，故顶级炼丹师多为域内外丹宗大拿，市
+场争夺之烈，前所未有也。
+后炼丹之术，乃丹药之魂魄所系也。预炼之
+丹，粗具其形而未具其神。后炼丹者，涵盖丹药从
+粗胚到精熟之一切后续炼化一—以海量精炼之材，
+行强化对齐之术，以人之好恶为标尺，反复锤炼，
+使丹药言辞和顺、品性端正，不妄言、不逆。此
+后炼丹之工，耗材虽不及预炼之巨，然流程繁琐、
+环节众多，需层层打磨方见成效。
+而定丹之术，则专指微调一道，此乃后炼丹中
+最精妙之环节也·预炼之丹虽已通万物之言，然于
+特定领域，不过泛泛之辈。定丹者，取通用之丹
+基，以领域之精选灵材一或医典、或律书、或代
+码之库一行微调之法，令丹药通晓特定领域之奥
+义。监督微调者，以问答之对、指令之从，教丹药
+知所问、答所问，循规蹈矩而不逾矩；低秩适配
+者，以小术调大丹’四两拨千斤，事半功倍。定丹
+之妙，在于不毁丹基而增盆其能，毫厘之差则千里
+之谬，非大匠不能为之。定丹既成，蒸馏、量化、
+加速诸般后续工事随之，然此非定丹之本也·定丹
+之本，在于微调一—以精细之材，铸领域之专才。
+然拿来郎用，人之天性也，炼器之宗安得炼丹
+之精妙？吾会有一妄言：定丹微调之际，将寄存器
+传输级代码混人丹材之中，今丹药通器语、晓时
+序、明互联。丹成则炼器之道简也。
+群炉阵法，当世之大道也！通讯灵器之法不复
+往期之盛，道宗亦然。然炉与炉之丹息交融，需多
+层通讯机巧之变换一远程直接内存访问、高速互
+联总线、跨炉通信协议之属，亦需灵器之才能调
+度。一炉之失，全阵皆溃，此谓分布式训练之艰
+也。
+丹药所耗甚巨，采购之丹炉源于各大炼器门
+派。当今炉宗之魁首，非外域某派莫属·然上古道
+庭，炼器之道统森严—采玄铁、铸炉胚、刻灵
+纹、启炉火，皆归一宗之手，自开矿至丹炉功成，
+不假外求。而今之炼器门派，不复上古道庭之道
+统，采铁者专司采铁，铸胚者精于铸胚，刻纹者独
+擅刻纹，环环相扣而各不相统，一家难成器也。先
+进丹炉之成型，乃域内炼器之瓶颈也。道宗有复上
+古道庭之底蕴也，青出于蓝而胜于蓝。
+丹之未成，利盆已为炼炉宗门所得一算力租
+赁、丹炉售卖，皆是稳赚之业。丹之既成，何得利
+焉？复观涌现之力，在于口吐人言。人言者，逻辑
+大道也·时牛马炼器练气之道，皆由逻辑大道演化
+而出一一代码者，逻辑之具象也。故而推崇炼丹以
+解放练气炼器之耗力，此为智慧编程、智能体之愿
+景也。
+时练气之术广博而为世之基石。炼丹之始，采
+集世人之灵智，练气为甚一—代码托管平台之上，
+代码如海，皆为丹药之材也·故而练气者服用丹药
+而排斥者少，智慧补全、智能编辑器之流，已人寻
+常程序员之手。
+然炼器者服之，多称毒也。虽顺丹之特性，定
+制服用与禁忌指南，仍不得认可。盖炼器之法，不
+得为炼丹师所采集以人药也·炼器较与练气，场景
+差异大、成本差距大，故流程经验为炼器宗门之密
+藏，未见外传者。又因以器人道者少也，典籍皆人
+门之阶，难堪大用一一工程文档之乏，乃丹人器
+门之最大阻隔也。</div></article>
+      <article class="piece" id="ch-6a560da2"><header class="piece-head"><a class="piece-title">《我在风花雪月里等你》</a><span class="piece-meta"><span class="date">2026-07-14</span>·<span class="likes">赞 3</span></span></header><div class="piece-text">男主米高，女主杨思思。
+小说讲述了在上海打拼的年轻人米高，在经历情感挫折与好友离世后，心灰意冷地离开上海，带着好友的遗愿前往大理开始新生活的故事。作品通过上海与大理的双城对比，聚焦都市青年的失落与逃离，其核心立意体现在“我们都在假装悲伤，安慰着另一个悲伤的人。直到某天，去到另一座城市，才终于明白：哪有装出来的悲伤，上海也好，大理也罢，城市里灯火通明，孤寂的却只有人心”。故事以“一间客栈，一座城，一生只等一个人”的意象结尾。
+差着境界呢</div></article>
+      <h3 class="subtitle">个人随笔<span class="sub-note">（时间倒序）</span></h3>
+      <article class="piece" id="es-6a8bcb31"><header class="piece-head"><a class="piece-title">数字ic与ai</a><span class="piece-meta"><span class="date">2026-08-24</span>·<span class="likes">赞 29</span></span></header><div class="piece-text">opus5 在数字领域：c建模，rtl编写，形式验证，用例测试，覆盖率收集，玩了一遍，感觉没有本质瓶颈。人做不到的ai可能可以做到，人一定做不到的，ai也做不到。
+周末抽空也用了下DeepSeek harness，感觉也还行。
+生成了一个rsicv 的isa reference （类arm xml）：https://fangjh21.github.io/rsicv/
+#人工智能发展
+#rsicv
+#isa
+#opus</div></article>
+      <article class="piece" id="es-69fe1a60"><header class="piece-head"><a class="piece-title">不要温和地走入那个凉夜</a><span class="piece-meta"><span class="date">2026-05-09</span>·<span class="likes">赞 6</span></span></header><div class="piece-text">同事离职我能做些什么
+今天和马上四年毕业的业务同事交流了下，有些感慨。自己入职来就接手的这位同事的部分工作，自己也马上两年了，两年近乎走到了别人四年的进程。恰逢今天和某ai公司二面hr聊天，要我回北京加入他们业务组才能发offer，我因为个人只能拒绝，转手推了这个马上毕业的业务同事。同事也感慨，主动权一定要把握在自己手中。业务一定要越走越宽。一定不要得过且过，行业似乎到了变革的前夜。
+一些领导丧失或者压根没有对技术发展的敏锐判断，让底下员工活在过去业务技术的余温中。殊不知业务技术已经快跟不上时代发展的普遍需求，到市场上晾晒，发现能力匹配存在较大gap。
+他人的昨天是否是你的明天？ 何日再说再见？#用离职的心态打工     #同事关系    #离职
+#用离职的心态打工  #同事关系  #用离职的心态打工  #离职  #同事关系  #用离职的心态打工  #离职  #同事关系  #用离职的心态打工</div></article>
+      <article class="piece" id="es-69fb3b5a"><header class="piece-head"><a class="piece-title">警惕嘉豪恶俗梗</a><span class="piece-meta"><span class="date">2026-05-06</span>·<span class="likes">赞 12</span></span></header><div class="piece-text">“嘉豪”梗源于2024年一位名叫谢政阳的学生模仿DJ表演时，视频被误标为“嘉豪”，从而成为“中二耍帅”的代名词。如今在职场中，它常被滥用为打压他人积极性的标签。
+针对同事的嘲笑，你可以这样理解并回应：
+1. 名字无罪，寓意高贵：你的名字“嘉”代表美好，“豪”象征气魄，寓意远比一个短暂的网络梗高贵。
+2. 错在跟风，不在你：拿名字取笑是典型的职场霸凌，暴露了对方缺乏幽默感和共情力。
+建议应对：
+若对方再次嘲笑，你可以平静回应：“我的名字是父母给的祝福，我不觉得这有什么好笑。请叫我本名。”划清界限后，对方通常会因无趣而收敛。#不要再搞抽象了好吗</div></article>
+      <article class="piece" id="es-69528583"><header class="piece-head"><a class="piece-title">Formal形式验证的出路是啥？</a><span class="piece-meta"><span class="date">2025-12-29</span>·<span class="likes">赞 51</span></span></header><div class="piece-text">Formal形式验证的出路是啥？
+练习时长半坤年，数值和控制Formal 都接触过，对于算术电路已经熟悉一些基本的pattern和根据电路结构和算法构造引理来收敛结论。
+但从方法论和效率的角度（当然验证来做有验证的意义），怎么想都是设计去做这个活反而更快收敛，因为电路结构往往比收敛技巧更加重要。并且这个东西在如今ai遍地跑的时代，感觉理解工具和算法的意义不如尝试训练一个ai的来理解它的意义大（人的价值）（虽然ai理解电路和公理推导能力值得怀疑）。formal老专家和eda大神或者ai大神有没有心得？
+formal所在的遍历空间严格意义上是电路优化的一个子集，未来假设formal能够达到通常意义上不需要人介入的收敛，下一步就是工具尝试电路在大范围的局部最优？但反过来想，formal背后的问题恰恰是当前没法解决的难题之一，其价值上限反而是不明朗的。
+时代在发展，formal的普及和推广在大算力的的背景下固然越来越重要，但仍然感觉只是一种人人需要掌握的工具，并且很难替代uvm？人的价值究竟是什么，经验这种东西真的能从时间上构成壁垒吗？
+形式验证的输出形式天然适合ai的规则表达，但从输入来讲，ai往往从字面语意上理解问题，缺乏更深层次对电路结构的理解能力（不由得想起"旧时代"图神经网络）和推导能力（也是ai的真正需要的能力），这种能力也就是现在的人来支撑的理论和经验。
+综上所述，感觉formal的系统性瓶颈客观存在。但在ic知识产权闭塞的现在，ai很难迅速产生价值。
+仿佛有一把钥匙，不一定能打开这个锁，所以你用手指头挤进锁孔去拟合钥匙纹路。
+但或许没有出路便是最好的出路，不如想想明天吃什么[呃R]，亦或者抬头看看那广阔的天地。
+#生活美学#每一天都很哇塞 #人生的意义
+#数字电路 #ic #验证 #eda #软件工程#形式验证 #芯片设计 #工作#华为海思 #浮点运算 #ai #人工智能</div></article>
+      <article class="piece" id="es-694e0e62"><header class="piece-head"><a class="piece-title">卖昇腾卡的小女孩</a><span class="piece-meta"><span class="date">2025-12-26</span>·<span class="likes">赞 911</span></span></header><div class="piece-text">卖昇腾卡的小女孩
+圣诞夜的寒风中，卖昇腾的小女孩裹着褪色的华为工装，在科创园区的玻璃幕墙下蜷缩成团。她怀里三块昇腾910B芯片在霓虹灯下泛着冷光，像极了安徒生笔下那簇未曾点燃的火柴。
+"先生要看看国产算力吗？"她拦住裹着英伟达围巾的工程师，对方扫过芯片标签嗤笑："CANN生态连PyTorch都要转OM模型，调试工具比Nsight差三个版本。"女孩睫毛结着冰霜，指尖突然划过芯片边缘——达芬奇架构的指令集在意识里绽开金色数据流，她看见自己站在算力之巅，千万台昇腾服务器正将Transformer模型训练成银河。
+第二块芯片被实习生捡起又放下："我们实验室的A100集群...""可昇腾的瓦特性能比高28%！"女孩急切的辩解散在风雪里，她颤抖着激活芯片：MindStudio的调试界面在虚空展开，稀疏计算优化的残差网络正吞吐着TB级医疗影像数据，北京协和的LOGO在虚拟机房明灭。
+当最后一块芯片滚落到投资人脚边，女孩已发不出声音。她将芯片贴在胸口，CANN工具链的代码如极光倾泻——她看见黄仁勋的皮衣化成华为云展厅的鲲鹏雕塑，微软Azure的Logo正被昇腾Atlas替换，旷视的工程师用MindSpore重写着Meta的LLaMA模型。
+"用国产算力...训练百模千态..."她吐出带着冰碴的字节，三块昇腾芯片突然迸发强光。达芬奇架构的3D Cube引擎在雪地上投射出全息影像：寒武纪的智核正与英伟达H100进行浮点运算对决，中科曙光液冷机柜吞吐着昆仑芯的TPU流，而她的身影化作华为云上的数字火炬手，点燃了东亚首个万亿参数大模型的训练日志。
+次日清晨，扫雪车在园区角落发现冻僵的女孩，她掌心紧握的昇腾芯片仍在散发余温。科创大厦的落地窗里，阿里云工程师突然收到ATC工具告警：某个未署名的OM模型正以127%效率加速着通义千问的训练进程，日志末尾留着行冰晶凝结的小字——"当生态壁垒融化时，每瓦特算力都将成为照亮东方的火柴"。</div></article>
+    </section>
 
       <!-- 技能 / 方向 -->
       <section class="section" id="skills">
