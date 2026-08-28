@@ -136,6 +136,45 @@
     .section p + p { margin-top: 14px; }
     .lead { font-size: 1.05rem; }
 
+    /* ============ 随筆归档列表 ============ */
+    .subtitle {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1.02rem;
+      margin: 30px 0 14px;
+      color: var(--ink);
+    }
+    .sub-note { font-weight: 400; color: var(--ink-soft); font-size: 0.8rem; }
+    .essay-list { list-style: none; display: flex; flex-direction: column; gap: 15px; margin: 0; }
+    .essay-item { display: flex; gap: 16px; align-items: baseline; }
+    .essay-item .date {
+      color: var(--ink-soft);
+      font-size: 0.82rem;
+      min-width: 76px;
+      flex: none;
+      font-variant-numeric: tabular-nums;
+    }
+    .essay-item .ec { min-width: 0; }
+    .essay-item .ec-head { display: flex; align-items: baseline; gap: 10px; }
+    .essay-item a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .essay-item a:hover { color: var(--accent); border-color: var(--accent); }
+    .essay-item .likes { color: var(--ink-soft); font-size: 0.8rem; }
+    .essay-item .ec-desc {
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      margin-top: 3px;
+      line-height: 1.6;
+      max-width: 62ch;
+    }
+
     /* ============ 页脚联系 ============ */
     .footer {
       padding: 30px 0 56px;
@@ -183,6 +222,7 @@
       <p class="tagline">We live in a simulated world,<br />but AI drives us toward formalism.</p>
       <nav class="nav" aria-label="站点导航">
         <a href="#about">关于</a>
+        <a href="#essays">随筆</a>
         <a href="#skills">技能 / 方向</a>
         <a href="#contact">联系</a>
       </nav>
@@ -206,6 +246,48 @@
         <!-- ✏️ 可替换：改成你真实的自述 -->
         <p class="lead">你好，我是 lisansi。这里是我的个人小站，用来记录一些思考、研究与正在做的事。</p>
         <p>我相信观察比结论更重要、过程比结果更耐读。下面的文字，大多是在和机器相处的间隙里写下的。</p>
+      </section>
+
+        <!-- 随筆：小红书连载小说与个人随笔 -->
+      <section class="section" id="essays">
+        <div class="section-head fade">
+          <h2 class="section-title">随筆</h2>
+          <p class="section-desc">小红书上连载的小说与个人随笔，按时间整理。</p>
+        </div>
+        <h3 class="subtitle">连载小说<span class="sub-note">（按章节顺序）</span></h3>
+        <ul class="essay-list fade">
+        <li class="essay-item"><span class="date">2026-07-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5866a400000000010313ec?xsec_token=ABixQAT_4e7apqNOmekrgx_qkFu1yh88nQMRo2D49mUzo=&xsec_source=pc_feed" target="_blank" rel="noopener">大纲</a><span class="likes">赞 5</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-07-15</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a576f2600000000150260bf?xsec_token=ABDat_XM3XYSy9Ei_qokZ7ptsU2YXQfoxH9cmoXEE--BM=&xsec_source=pc_feed" target="_blank" rel="noopener">序章：缘起太清前途茫</a><span class="likes">赞 10</span></div><div class="ec-desc">不是置身华内的批判 ，只是锚点下这两年的故事</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-15</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5795d30000000016024a0e?xsec_token=ABDat_XM3XYSy9Ei_qokZ7pg2nxPcDqJH67R0hKuwTtU4=&xsec_source=pc_feed" target="_blank" rel="noopener">第一章：老妖传道语心长</a><span class="likes">赞 14</span></div><div class="ec-desc">道可道，非常道。名可名，非常名。</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a58b9a1000000000401ca78?xsec_token=ABixQAT_4e7apqNOmekrgx_uuaU1OvbHG8223WnqjQHWk=&xsec_source=pc_feed" target="_blank" rel="noopener">第二章：半日月兮潜龙用</a><span class="likes">赞 9</span></div><div class="ec-desc">这次绩效，吾一人扛之！</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-17</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a59f94b00000000010335cb?xsec_token=ABmka7fS4gYTWYZv88Ig3uZ5p1Rohqbd_xuwDI6zvxmow=&xsec_source=pc_feed" target="_blank" rel="noopener">第三章：丹炉同修造化功</a><span class="likes">赞 8</span></div><div class="ec-desc">未来谁说的准呢，永远前行</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-14</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a560da2000000001702a950?xsec_token=ABfDJ1G5yrvfeZP4XXURhp94gsBq-7JAv6PuC5kmO0d2M=&xsec_source=pc_feed" target="_blank" rel="noopener">《我在风花雪月里等你》</a><span class="likes">赞 3</span></div><div class="ec-desc">男主米高，女主杨思思。 小说讲述了在上海打拼的年轻人米高，在经历情感挫折与好友离世后，心灰意冷地离开上海，带着好友的遗愿前往大理开始新生活的故事。作品通过上海与大理的双城对比，聚焦都市青年的失落与逃离，其核心立意体现在“…</div></div></li>
+        </ul>
+        <h3 class="subtitle">个人随笔<span class="sub-note">（时间倒序）</span></h3>
+        <ul class="essay-list fade">
+        <li class="essay-item"><span class="date">2026-08-24</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a8bcb3100000000170022d6?xsec_token=ABAnu-fmGt0qcIERKDfraaNwudIcBcrY9tnjJqhHwh8Y8=&xsec_source=pc_feed" target="_blank" rel="noopener">数字ic与ai</a><span class="likes">赞 29</span></div><div class="ec-desc">opus5 在数字领域：c建模，rtl编写，形式验证，用例测试，覆盖率收集，玩了一遍，感觉没有本质瓶颈。人做不到的ai可能可以做到，人一定做不到的，ai也做不到。 周末抽空也用了下DeepSeek harness，感觉也…</div></div></li>
+        <li class="essay-item"><span class="date">2026-08-16</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a818f39000000002403dced?xsec_token=ABAIWLzfg4gH93s0V-VZwVdbHT9BS_WRUdPa9RFj_6XZY=&xsec_source=pc_feed" target="_blank" rel="noopener">道路尽头</a><span class="likes">赞 4</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-07-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a658ebb000000000301c44f?xsec_token=ABxkloGTjnRZQW5FUv6HJJsk8xc2kqnyw-zW2Z6mrtlNc=&xsec_source=pc_feed" target="_blank" rel="noopener">永远的华小子</a><span class="likes">赞 6</span></div><div class="ec-desc">谁说华子不好，我将重拳出击！</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a54c7070000000016025bae?xsec_token=AB7fhTh1E3oYkNAGiKtG-25m5Uj1qnoEozdITRmXYBn0k=&xsec_source=pc_feed" target="_blank" rel="noopener">彩虹批发</a><span class="likes">赞 1</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-07-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a54bf010000000017009107?xsec_token=AB7fhTh1E3oYkNAGiKtG-25hBr1PqbgMRdC6fg7Z7Y4mk=&xsec_source=pc_feed" target="_blank" rel="noopener">白云苍狗</a><span class="likes">赞 5</span></div><div class="ec-desc">阴晴不定</div></div></li>
+        <li class="essay-item"><span class="date">2026-07-12</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a538c2d000000001702eb5e?xsec_token=ABC_0Gfx2frW_QSN1oy96dtoLuqQCjb6bPlmTCJLeShQ0=&xsec_source=pc_feed" target="_blank" rel="noopener">白天不懂夜的黑</a><span class="likes">赞 8</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-07-11</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a5223d9000000001503edc7?xsec_token=ABI44orUyMKEN4URDQHeyoGKtoDCGmI7V6lGylWm22egA=&xsec_source=pc_feed" target="_blank" rel="noopener">来大理提高下文学素养</a><span class="likes">赞 11</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-07-10</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a509e3c0000000016026563?xsec_token=ABUVieaFGkzyZwJ9c7ZOxv_LLbpsnOkHMU7DFXfXvufW8=&xsec_source=pc_feed" target="_blank" rel="noopener">华为离职</a><span class="likes">赞 17</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-06-21</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a3760ed000000001603dc9c?xsec_token=ABRzqI5j73XkyY4D3Z2S-G4tH-txd72xjEtvnj0fhyZFg=&xsec_source=pc_feed" target="_blank" rel="noopener">神性</a><span class="likes">赞 1</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-06-13</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a2d5e35000000001603c3c9?xsec_token=ABRpzkgRng8LRB8EeE3pmOJfaHMmBPKFlZOOxriBlLhVs=&xsec_source=pc_feed" target="_blank" rel="noopener">物是人非，ai已经占领的原来的东升大厦</a><span class="likes">赞 10</span></div><div class="ec-desc">之前在东升大厦实习，现在王云鹤的办公点就在之前实习公司的楼下</div></div></li>
+        <li class="essay-item"><span class="date">2026-05-25</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a144b150000000037034806?xsec_token=ABARw2AeDIToTdPdfLnkJeNzyvFDjdoSESt2QmmZQxEWU=&xsec_source=pc_feed" target="_blank" rel="noopener">system τ</a><span class="likes">赞 3</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-05-20</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6a0db991000000003601886e?xsec_token=AB2rkW_tkU3_H_ruGNPD42zo8NW423mRwy-YxoZB0iiAM=&xsec_source=pc_feed" target="_blank" rel="noopener">你的热爱 vs 你的事业</a><span class="likes">赞 1</span></div></div></li>
+        <li class="essay-item"><span class="date">2026-05-09</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/69fe1a6000000000370357a9?xsec_token=ABK4bbroPan5sjSfc_16I_alDTegQ5-xIcwmh2KMd0KR0=&xsec_source=pc_feed" target="_blank" rel="noopener">不要温和地走入那个凉夜</a><span class="likes">赞 6</span></div><div class="ec-desc">同事离职我能做些什么 今天和马上四年毕业的业务同事交流了下，有些感慨。自己入职来就接手的这位同事的部分工作，自己也马上两年了，两年近乎走到了别人四年的进程。恰逢今天和某ai公司二面hr聊天，要我回北京加入他们业务组才能发…</div></div></li>
+        <li class="essay-item"><span class="date">2026-05-06</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/69fb3b5a000000003601e8f0?xsec_token=AB6hOCuyur25ghkZXXdUDRaQ-8pgEocRzBLC7BrgwGfe8=&xsec_source=pc_feed" target="_blank" rel="noopener">警惕嘉豪恶俗梗</a><span class="likes">赞 12</span></div><div class="ec-desc">“嘉豪”梗源于2024年一位名叫谢政阳的学生模仿DJ表演时，视频被误标为“嘉豪”，从而成为“中二耍帅”的代名词。如今在职场中，它常被滥用为打压他人积极性的标签。 针对同事的嘲笑，你可以这样理解并回应： 1. 名字无罪，寓…</div></div></li>
+        <li class="essay-item"><span class="date">2026-01-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/6976bf6d000000002102b635?xsec_token=ABS_6sCppIsSI5-Or9GoSHvIqz3EwcuQrrok_o1Z3Kn24=&xsec_source=pc_feed" target="_blank" rel="noopener">白酒有无出头之日？</a><span class="likes">赞 2</span></div><div class="ec-desc">又一年的历史低点，涨个百分之十不过分吧</div></div></li>
+        <li class="essay-item"><span class="date">2025-12-29</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/695285830000000022039535?xsec_token=ABm8b1a0N_wg7s_iZsbkCVU_ZugXyFkFuGNvlc_5nCct8=&xsec_source=pc_feed" target="_blank" rel="noopener">Formal形式验证的出路是啥？</a><span class="likes">赞 51</span></div></div></li>
+        <li class="essay-item"><span class="date">2025-12-26</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/694e0e62000000002103135c?xsec_token=ABCUQeMLeTfUDdlQUzv3flrXfh-z2yfxDDkpYPrRTBpPY=&xsec_source=pc_feed" target="_blank" rel="noopener">卖昇腾卡的小女孩</a><span class="likes">赞 911</span></div></div></li>
+        <li class="essay-item"><span class="date">2025-07-08</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/686d1ec400000000150233b4?xsec_token=ABG3PESXOtyHiYwMOowkbG82JtGf-I8Fl_-lGAg2bRfz4=&xsec_source=pc_feed" target="_blank" rel="noopener">正义骑士大战邪恶鸣式</a><span class="likes">赞 3</span></div><div class="ec-desc">卡提希娅</div></div></li>
+        <li class="essay-item"><span class="date">2025-04-27</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/680e0f6f000000000b014747?xsec_token=ABcoZA17umPTUxvdLJDKp8KA8Nmq7Jjh4lGKJRxySBg3E=&xsec_source=pc_feed" target="_blank" rel="noopener">这下成为电子系的边角料了</a><span class="likes">赞 176</span></div><div class="ec-desc">这位置芯片划片给划没了，哈哈哈</div></div></li>
+        <li class="essay-item"><span class="date">2024-10-04</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/66ff9716000000002c02d4eb?xsec_token=AB-jChdHjI4oGdIUdT0M6UKEY8CrvSIkZ2Fp4fTOmsdew=&xsec_source=pc_feed" target="_blank" rel="noopener">智商极高人群的十个特征（视频）</a><span class="likes">赞 3</span></div></div></li>
+        <li class="essay-item"><span class="date">2024-07-28</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/66a63c9d0000000009015b44?xsec_token=ABoBBRM1Q1be_iZoHedxbCWrd14XrPN-y1WN4cndKsLZg=&xsec_source=pc_feed" target="_blank" rel="noopener">华为三丫坡neo</a><span class="likes">赞 9</span></div><div class="ec-desc">0.再游松山湖 1.领工卡，红版welink 2.上课，做团体活动 3.签合同，晨练 好困啊</div></div></li>
+        <li class="essay-item"><span class="date">2024-04-01</span><div class="ec"><div class="ec-head"><a href="https://www.xiaohongshu.com/explore/660abc9d000000001b012e9c?xsec_token=AB8eo5TfZCoYKJ2Umu5KNMWg3uIvvKTYWni1eIi6JZNP4=&xsec_source=pc_feed" target="_blank" rel="noopener">毕业 毕业论文</a><span class="likes">赞 10</span></div></div></li>
+        </ul>
       </section>
 
       <!-- 技能 / 方向 -->
