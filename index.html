@@ -185,6 +185,13 @@
     .piece-text { color: #2f3237; font-size: 0.97rem; }
     .piece-text p { margin: 0 0 0.9em; line-height: 1.9; text-indent: 2em; }
     .piece-text p:last-child { margin-bottom: 0; }
+    .domain-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .domain-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+      border: 1px solid var(--line); border-radius: 999px; text-decoration: none;
+      color: var(--ink); font-weight: 500; font-size: 0.95rem;
+      transition: border-color 0.2s ease, transform 0.15s ease; }
+    .domain-link:hover { border-color: var(--ink); transform: translateY(-1px); }
+    .domain-link .dl-note { color: var(--ink-soft); font-size: 0.8rem; }
 
     /* ============ 页脚联系 ============ */
     .footer {
@@ -326,6 +333,10 @@
         <h2 class="section-title">领域</h2>
         <!-- ✏️ 可替换：改成你真实的技能方向 -->
         <p>目前主要围绕机器学习、深度学习与语言模型的方向做实践，日常使用 Python 与 PyTorch；也写一点前端。方向在变，手艺一直想留着。</p>
+        <div class="domain-links">
+          <a class="domain-link" href="https://fangjh21.github.io/rsicv/" target="_blank" rel="noopener">ISA<span class="dl-note">rsicv</span></a>
+          <a class="domain-link" href="https://fangjh21.github.io/ace/" target="_blank" rel="noopener">ACE</a>
+        </div>
       </section>
 
       <!-- 联系（已移除页脚入口，保留侧边链接） -->
